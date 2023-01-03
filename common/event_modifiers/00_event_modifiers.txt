@@ -503,6 +503,12 @@ colonial_enthusiasm = {
 	global_colonial_growth = 25
 }
 
+fra_colonial_enthusiasm_mod = {
+	colonist_placement_chance = 0.05
+	global_colonial_growth = 25
+	colonists = 1
+}
+
 colonial_assimilation_of_natives_mod = {
 	native_uprising_chance = -0.2
 	native_assimilation = 0.4
@@ -12716,4 +12722,19 @@ fra_breaks_dual_monarchy = {
 	diplomatic_reputation = -1
 	curia_powers_cost = 0.25
 	improve_relation_modifier = -0.10
+}
+
+fra_carib_mod = {
+	light_ship_power = 0.15
+	light_ship_cost = -0.15
+	allowed_marine_fraction = 0.10
+	naval_attrition = -0.10
+}
+
+fra_invest_in_colonies = {
+	colonists = 1
+	global_colonial_growth = 10
+	may_explore = yes
+	global_tax_modifier = -0.05
+	global_manpower_modifier = -0.05
 }

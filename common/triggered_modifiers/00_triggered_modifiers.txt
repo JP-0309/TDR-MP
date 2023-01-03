@@ -3,6 +3,24 @@
 #
 # Effects are fully scriptable here.
 
+#Caribbean Buff
+
+carib_buff = {
+	potential = {
+		capital_scope = {
+			superregion = europe_superregion
+		}
+	}
+	
+	trigger = {
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				colonial_region = colonial_the_carribean
+			}
+	}	
+	global_trade_goods_size_modifier = 0.10
+}
+
 #Andorra France
 
 andorra_france = {

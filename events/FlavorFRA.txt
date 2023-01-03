@@ -5,6 +5,71 @@
 namespace = flavor_fra
 normal_or_historical_nations = yes
 
+#Fra Age of Colonialism
+country_event = {
+	id = flavor_fra.9992
+	title = "flavor_fra.9992.t"
+	desc = "flavor_fra.9992.d"
+	picture = COLONIZATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+			tag = FRA
+				AND = {
+					owns = 183
+					183 = {
+						new_world_i = 100
+					}
+				}
+		}
+		
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	option = {			# Invest in Colonies
+		name = "flavor_fra.9992.a"
+		add_country_modifier = {
+			name = fra_invest_in_colonies
+			duration = -1
+		}
+		
+		add_treasury = -250
+		add_adm_power = -30
+		add_dip_power = -30
+		add_mil_power = -30
+		
+		create_explorer = { tradition = 60 }
+		add_ruler_personality = expansionist_personality
+		
+	custom_tooltip = flavor_fra.9992.a.tt
+	}
+	
+	option = {			# Nah to colonizing
+		name = "flavor_fra.9992.b"
+	}
+}
+
+#France Caribean Islands
+country_event = {
+	id = flavor_fra.9991
+	title = "flavor_fra.9991.t"
+	desc = "flavor_fra.9991.d"
+	picture = COLONIZATION_eventPicture
+	
+	fire_only_once = yes
+	
+	option = {			# France gets 5 provs in Caribbean
+		name = "flavor_fra.9991.a"
+		add_country_modifier = {
+			name = fra_carib_mod
+			duration = -1
+		}
+	custom_tooltip = flavor_fra.9991.a.tt
+	}
+}
+
 #France Breaks Dual Monarchy
 country_event = {
 	id = flavor_fra.9990

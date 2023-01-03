@@ -281,53 +281,50 @@ emp_france_missions_1_b = {
 	}
 	has_country_shield = yes
 	
-	emp_fra_france_discovers_north_america = {
+	emp_fra_france_discovers_north_america_mod = {
 		icon = mission_establish_high_seas_navy
 		required_missions = {  }
 		completed_by = 1535.1.1
 		position = 7
 		trigger = {
-			has_idea_group = exploration_ideas
-			has_idea = quest_for_the_new_world
-			custom_trigger_tooltip = {
-				tooltip = fra_canada_discovery.tooltip
-				colonial_canada = {
+		
+			994 = {
 					has_discovered = ROOT
-				}
 			}
-			custom_trigger_tooltip = {
-				tooltip = fra_carib_discovery.tooltip
-				colonial_the_carribean = {
+				
+			2583 = {
 					has_discovered = ROOT
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = fra_louis_discovery.tooltip
-				colonial_louisiana = {
-					has_discovered = ROOT
-				}
 			}
 		}
 		effect = {
 			add_country_modifier = {
-				name = "fra_colonial_enthusiasm"
-				duration = 7300
+				name = "fra_colonial_enthusiasm_mod"
+				duration = 21900
+			}
+			
+			AND = {
+				994 is_empty = yes
+				2583 is_empty = yes
+			}
+			994 = {
+				create_colony = 980
+			}
+			2583 = {
+				create_colony = 750
 			}
 		}
 		ai_weight = {
 			factor = 500
 		}
 	}
-	emp_fra_french_colony_in_north_america = {
+	emp_fra_french_colony_in_north_america_mod = {
 		icon = mission_colonial
-		required_missions = { emp_fra_france_discovers_north_america }
+		required_missions = { }
 		completed_by = 1608.7.3
 		position = 8
 		provinces_to_highlight = {
 			has_discovered = ROOT
 			OR = {
-				colonial_region = colonial_canada
-				colonial_region = colonial_louisiana
 				colonial_region = colonial_the_carribean
 			}
 			NOT = {
@@ -342,28 +339,10 @@ emp_france_missions_1_b = {
 					colonial_region = colonial_the_carribean
 				}
 			}
-			OR = {
-				custom_trigger_tooltip = {
-					tooltip = fra_canada_colony.tooltip
-					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 5
-						colonial_region = colonial_canada
-					}
-				}
-				custom_trigger_tooltip = {
-					tooltip = fra_louisiana_colony.tooltip
-					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 5
-						colonial_region = colonial_louisiana
-					}
-				}
-			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = "french_tariffs"
-				duration = 7300
-			}
+			
+			country_event = { id = flavor_fra.9991 }
 		}
 		ai_weight = {
 			factor = 500
@@ -371,7 +350,8 @@ emp_france_missions_1_b = {
 	}
 	emp_fra_louisiana = {
 		icon = mississippi_company
-		required_missions = { emp_fra_french_colony_in_north_america }
+		required_missions = { emp_fra_french_colony_in_north_america_mod }
+		position = 9
 		provinces_to_highlight = {
 			has_discovered = ROOT
 			OR = {
@@ -411,6 +391,7 @@ emp_france_missions_1_b = {
 	emp_fra_american_independence = {
 		icon = support_american_independence
 		required_missions = { emp_fra_louisiana }
+		position = 10
 		provinces_to_highlight = {
 			has_discovered = ROOT
 			owner = {
@@ -696,26 +677,10 @@ emp_france_missions_2 = {
 					duration = 7300
 				}
 			}
-			wallonia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			brabant_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			flanders_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
+			
+			add_country_modifier = {
+				name = "france_rules_the_waves"
+				duration = -1
 			}
 		}
 		ai_weight = {
