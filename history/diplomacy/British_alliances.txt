@@ -23,19 +23,12 @@ march = {
 }
 
 # England-Wales
-march = {
-	first = ENG
-	second = WLS
-	start_date = 1444.1.1
-	end_date = 1552.8.3
-}
-
-# England-Wales
-royal_marriage = {
-	first = ENG
-	second = WLS
-	start_date = 1444.1.1
-	end_date = 1552.8.3
+dependency = {
+    subject_type = "principality"
+    first = ENG
+    second = WLS
+    start_date = 1444.1.1
+    end_date = 1535.4.22
 }
 
 # England-Meath
