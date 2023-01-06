@@ -12738,3 +12738,20 @@ fra_invest_in_colonies = {
 	global_tax_modifier = -0.05
 	global_manpower_modifier = -0.05
 }
+
+fra_swiss_peace = {
+	mercenary_cost = -0.15
+	mercenary_manpower = 0.15
+	free_leader_pool = 1
+	global_trade_goods_size_modifier = 0.02
+ }
+ 
+ swiss_fra_peace = {
+	trade_efficiency = 0.10
+	global_trade_goods_size_modifier = 0.10
+ }
+ 
+ swiss_defense = {
+	land_morale = 0.10
+	defensiveness = 0.20
+ }

@@ -1294,3 +1294,8 @@
  estate_burghers_desert_expansion_coastal_deserts:0 "Coastal Desert Expansion"
  estate_burghers_desert_expansion_deserts:0 "Desert Expansion"
  estate_burghers_desert_expansion_drylands:0 "Dryland Expansion"
+ estate_nobles_france_horses:0 "The French Chevaliers"
+ estate_nobles_france_horses_grant_tt:0 "Hire a free §Y50 Army Tradition General§!. Our military will emphasize making use of chevaliers."
+ estate_nobles_france_horses_revoke_gt:0 "Revoking this privilege will anger our nobles, who will be upset at the idea of their historical traditions being overturned."
+ estate_nobles_france_horses_desc:0 "The French Chevaliers are some of the most feared soldiers in our time. French Knights train their whole lives for the opportunity to serve their lords in battle. Knighthood in France is a historical tradition that emphasizes honor and integrity, as well as combat prowess."
+ unlock_privilege_estate_nobles_france_horses_tt:0 "Enables the §YFrench Chevaliers§! nobility privilege."

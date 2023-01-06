@@ -10908,6 +10908,63 @@ estate_burghers_mountain_expansion = {
 	}
 }
 
+estate_nobles_france_horses = {
+	icon = privilege_raise_host
+	max_absolutism = 10
+	influence = 0.15
+	loyalty = 0.10
+	land_share = 5
+	is_valid = {
+		has_unlocked_estate_privilege = { estate_privilege = estate_nobles_france_horses }
+	}
+	can_select = {
+		army_tradition = 40
+	}
+	on_granted = {
+		custom_tooltip = estate_nobles_france_horses_grant_tt
+			create_general = { tradition = 50 }
+	}
+	on_revoked = {
+		custom_tooltip = estate_nobles_france_horses_revoke_gt
+		random_owned_province = {
+			spawn_rebels = {
+				size = 3
+				win = yes
+				culture = cosmopolitan_french
+				type = noble_rebels
+				estate = estate_nobles
+				should_take_capital = yes
+			}
+		}
+		
+		random_owned_province = {
+			spawn_rebels = {
+				size = 1
+				win = yes
+				culture = cosmopolitan_french
+				type = noble_rebels
+				estate = estate_nobles
+				should_take_capital = yes
+			}
+		}
+	}
+	penalties = {
+		fire_damage_received = 0.10
+		cavalry_cost = 0.15
+	}
+	benefits = {
+		shock_damage_received = -0.10 
+		cavalry_power = 0.15
+		army_tradition = 0.75
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
 estate_nobles_leidang_conscription = {
 	icon = privilege_sailors
 	max_absolutism = -5
@@ -10936,7 +10993,6 @@ estate_nobles_leidang_conscription = {
 		}
 	}
 }
-
 estate_nobles_leidang_mass_conscription = {
 	icon = privilege_marines
 	max_absolutism = 0

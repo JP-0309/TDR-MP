@@ -76,193 +76,87 @@ emp_france_missions_1 = {
 			}
 		}
 	}
-	
-	emp_fra_auld_alliance = {
-		icon = the_auld_alliance
-		required_missions = { emp_fra_brest emp_fra_end_hyw }
+	emp_fra_burg = {
+		icon = mission_landsknecht_soldier
 		provinces_to_highlight = {
-			owner = {
-				NOT = { tag = ENG }
-				NOT = { tag = GBR }
-				capital_scope = {
-					region = british_isles_region
-				}
-				total_development = 70
+			area = west_burgundy_area
+			area = bourgogne_area
+			area = champagne_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			OR = {
-				custom_trigger_tooltip = {
-					tooltip = fra_auld_alliance_tt
-					any_country = {
-						NOT = { tag = ENG }
-						NOT = { tag = GBR }
-						capital_scope = {
-							region = british_isles_region
-						}
-						has_opinion = { who = ROOT value = 100 }
-						total_development = 70
-					}
-				}
-				british_isles_region = {
-					country_or_non_sovereign_subject_holds = ROOT
-					type = all
-				}
+			is_subject = no
+			
+			west_burgundy_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
-		}
-		effect = {
-			custom_tooltip = fra_british_claims_tt
-			hidden_effect = {
-				british_isles_region = {
-					limit = {
-						OR = {
-							owned_by = ENG
-							owned_by = GBR
-						}
-					}
-					add_claim = ROOT
-				}
+			bourgogne_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
-		}
-		ai_weight = {
-			factor = 0
-		}
-	}
-	emp_fra_england = {
-		icon = defeat_the_english
-		required_missions = { emp_fra_auld_alliance }
-		provinces_to_highlight = {
-			region = british_isles_region
+			champagne_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			
 			if = {
 				limit = {
-					OR = {
-						ENG = {
-							num_of_owned_provinces_with = {
-								region = british_isles_region
-								value = 10
-							}
-						}
-						GBR = {
-							primary_culture = english
-							num_of_owned_provinces_with = {
-								region = british_isles_region
-								value = 10
-							}
-						}
-					}
+					exists = BUR
 				}
-				OR = {
-					owned_by = ENG
-					owned_by = GBR
-				}
+				NOT = { war_with = BUR }
 			}
-			else = {
-				province_id = 236
-			}
-		}
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = fra_defeat_england_tt
-				NOT = {
-					ENG = {
-						num_of_owned_provinces_with = {
-							region = british_isles_region
-							value = 10
-						}
-					}
+			if = {
+				limit = {
+					exists = NEV
 				}
-				if = {
-					limit = {
-						exists = GBR
-					}
-					GBR = {
-						OR = {
-							NOT = {
-								primary_culture = english
-							}
-							NOT = {
-								num_of_owned_provinces_with = {
-									region = british_isles_region
-									value = 10
-								}
-							}
-						}
-					}
-				}
-			}
-			236 = {
-				NOT = {
-					OR = {
-						owned_by = ENG
-						owned_by = GBR
-					}
-				}
+				NOT = { war_with = NEV }
 			}
 		}
 		effect = {
-			add_power_projection = {
-				type = mission_rewards_power_projection
-				amount = 25
-			}
-			add_country_modifier = {
-				name = "france_rules_the_waves"
-				duration = -1
+			unlock_estate_privilege = {
+					estate_privilege = estate_nobles_france_horses
 			}
 		}
 		ai_weight = {
 			factor = 0
 		}
 	}
-	emp_fra_conquer_flanders_wallonia = {
-		icon = mission_cannons_firing
-		required_missions = { emp_fra_recover_calais }
-		position = 5
-		provinces_to_highlight = {
-			OR = {
-				area = wallonia_area
-				area = brabant_area
-				area = flanders_area
-			}
-			NOT = {
-				owned_by = ROOT
-			}
-		}
+	
+	emp_fra_swiss_peace = {
+		icon = mission_alliances
+		required_missions = { emp_fra_burg }
 		trigger = {
-			wallonia_area = {
-				type = all
-				owned_by = ROOT
+			is_subject = no
+			has_opinion = {
+				who = SWI
+				value = 100
 			}
-			brabant_area = {
-				type = all
-				owned_by = ROOT
+			
+			SWI = {
+				has_opinion = {
+					who = FRA
+					value = 100
+				}
 			}
-			flanders_area = {
-				type = all
-				owned_by = ROOT
+			
+			
+			exists = SWI
+			
+			if = {
+				limit = {
+					exists = SWI
+				}
+				NOT = { war_with = SWI }
 			}
 		}
 		effect = {
-			wallonia_area = {
-				add_province_modifier = {
-					name = "faster_integration"
-					duration = 7300
-				}
-			}
-			brabant_area = {
-				add_province_modifier = {
-					name = "faster_integration"
-					duration = 7300
-				}
-			}
-			flanders_area = {
-				add_province_modifier = {
-					name = "faster_integration"
-					duration = 7300
-				}
-			}
+			country_event = { id = flavor_fra.9993 }
 		}
 		ai_weight = {
-			factor = 75
+			factor = 0
 		}
 	}
 }
@@ -608,57 +502,11 @@ emp_france_missions_2 = {
 			factor = 500
 		}
 	}
-	emp_fra_conquer_picardy_fra = {
-		icon = mission_assemble_an_army
-		required_missions = { emp_fra_end_hyw }
-		completed_by = 1477.1.5
-		provinces_to_highlight = {
-			OR = {
-				area = champagne_area
-				province_id = 89
-				province_id = 88
-				province_id = 1743
-			}
-			NOT = {
-				owned_by = ROOT
-			}
-		}
-		trigger = {
-			champagne_area = {
-				type = all
-				owned_by = ROOT
-			}
-			89 = {
-				owned_by = ROOT
-			}
-			88 = {
-				owned_by = ROOT
-			}
-			1743 = {
-				owned_by = ROOT
-			}
-		}
-		effect = {
-			87 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-		}
-		ai_weight = {
-			factor = 500
-		}
-	}
 	emp_fra_recover_calais = {
 		icon = mission_galleys_in_port
-		required_missions = { emp_fra_conquer_picardy_fra }
+		required_missions = { emp_fra_end_hyw }
 		completed_by = 1558.1.7
+		position = 3
 		provinces_to_highlight = {
 			province_id = 87
 			NOT = {
@@ -682,6 +530,63 @@ emp_france_missions_2 = {
 				name = "france_rules_the_waves"
 				duration = -1
 			}
+		}
+		ai_weight = {
+			factor = 500
+		}
+	}
+	
+	emp_fra_normandy = {
+		icon = mission_high_income
+		required_missions = { emp_fra_recover_calais }
+		completed_by = 1558.1.7
+		position = 4
+		provinces_to_highlight = {
+			province_id = 4384
+			province_id = 169
+			province_id = 171
+			province_id = 170
+			area = normandy_area
+			area = picardy_area
+			area = wessex_area
+			
+		}
+		trigger = {
+			1272 = { #Normandy
+				is_strongest_trade_power = ROOT
+			}
+			
+			167 = {
+				owned_by = ROOT
+			}
+			
+			4385 = {
+				owned_by = ROOT
+			}
+			
+			170 = {
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			167 = {
+				add_base_production = 2
+				add_base_tax = 2
+				add_base_manpower = 2
+			}
+			
+			4385 = {
+				add_base_production = 2
+				add_base_tax = 2
+				add_base_manpower = 2
+			}
+			
+			170 = {
+				add_base_production = 2
+				add_base_tax = 2
+				add_base_manpower = 2
+			}
+			
 		}
 		ai_weight = {
 			factor = 500
@@ -1112,6 +1017,9 @@ emp_france_missions_3 = {
 			OR = {
 				province_id = 174
 				province_id = 173
+				province_id = 4967
+				province_id = 176
+				province_id = 4694
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1122,6 +1030,15 @@ emp_france_missions_3 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			173 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4967 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			176 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4694 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
