@@ -373,13 +373,13 @@ country_event = {
 	}
 }
 
-#France Caribean Islands
+#France Caribbean Islands
 country_event = {
 	id = flavor_fra.9991
 	title = "flavor_fra.9991.t"
 	desc = "flavor_fra.9991.d"
 	picture = COLONIZATION_eventPicture
-	
+	is_triggered_only = yes
 	fire_only_once = yes
 	
 	option = {			# France gets 5 provs in Caribbean

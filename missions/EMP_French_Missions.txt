@@ -159,6 +159,80 @@ emp_france_missions_1 = {
 			factor = 0
 		}
 	}
+	
+	emp_fra_subjugate_lorraine = {
+		icon = mission_build_up_to_force_limit
+		position = 5
+		provinces_to_highlight = {
+			area = lorraine_area
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			lorraine_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "fra_into_germany"
+				duration = 7300
+			}
+			alsace_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			wallonia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			picardy_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 500
+		}
+	}
+	
+	emp_fra_annex_alsace = {
+		icon = mission_assemble_an_army
+		required_missions = { emp_fra_subjugate_lorraine }
+		position = 6
+		provinces_to_highlight = {
+			area = alsace_area
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			alsace_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "fra_germany"
+				duration = -1
+			}
+		}
+		ai_weight = {
+			factor = 500
+		}
+	}
 }
 emp_france_missions_1_b = {
 	slot = 1
@@ -1089,14 +1163,7 @@ emp_france_missions_3 = {
 			}
 		}
 		effect = {
-			bourgogne_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			west_burgundy_area = {
+			corsica_sardinia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -1136,7 +1203,6 @@ emp_france_missions_3 = {
 	}
 	emp_fra_annex_savoy = {
 		icon = mission_unite_home_region
-		required_missions = { emp_fra_conquer_burgundy_area }
 		provinces_to_highlight = {
 			OR = {
 				area = savoy_dauphine_area
@@ -1201,49 +1267,7 @@ emp_france_missions_3 = {
 			factor = 75
 		}
 	}
-	emp_fra_switzerland = {
-		icon = helvetic_conquest
-		required_missions = { emp_fra_annex_alsace }
-		provinces_to_highlight = {
-			OR = {
-				area = switzerland_area
-				area = romandie_area
-				owned_by = SWI
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			OR = {
-				SWI = {
-					is_subject_of = FRA
-				}
-				AND = {
-					switzerland_area = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					romandie_area = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-			}
-		}
-		effect = {
-			if = {
-				limit = {
-					has_dlc = "Cradle of Civilization"
-				}
-				add_army_professionalism = 0.1
-			}
-			else = {
-				add_army_tradition = 20
-			}
-		}
-		ai_weight = {
-			factor = 75
-		}
-	}
+	
 	emp_fra_france_discovers_the_carribean = {
 		icon = mission_sea_battles
 		required_missions = {  }
@@ -1440,45 +1464,63 @@ emp_france_missions_4 = {
 			}
 		}
 	}	
-	emp_fra_conquer_burgundy_area = {
-		icon = mission_landsknecht_soldier
+	emp_fra_conquer_corsica = {
+		icon = mission_mare_nostrum
 		required_missions = { emp_fra_conquer_provence }
 		position = 3
 		provinces_to_highlight = {
+			province_id = 1247
+		}
+		trigger = {
 			OR = {
-				area = bourgogne_area
-				area = west_burgundy_area
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		trigger = {
-			west_burgundy_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			bourgogne_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				1247 = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				127 = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				4735 = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2986 = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
 		}
 		effect = {
-			lorraine_area = {
+			kabylia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			savoy_dauphine_area = {
+			barbary_coast_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			piedmont_area = {
+			ouled_nail_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hautes_plaines_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			algiers_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -1490,83 +1532,44 @@ emp_france_missions_4 = {
 			factor = 500
 		}
 	}
-	emp_fra_subjugate_lorraine = {
-		icon = mission_build_up_to_force_limit
-		required_missions = { emp_fra_conquer_burgundy_area }
+	emp_fra_algerian_trade = {
+		icon = mission_pacify_the_berbers
+		required_missions = { emp_fra_conquer_corsica }
 		provinces_to_highlight = {
-			area = lorraine_area
+			AND = {
+				province_id = 336
+				province_id = 338
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			lorraine_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			1110 = { #Safi
+				is_strongest_trade_power = ROOT
 			}
-		}
-		effect = {
-			alsace_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
+			
+			338 = {
+				owned_by = ROOT
 			}
-		}
-		ai_weight = {
-			factor = 500
-		}
-	}
-	emp_fra_annex_alsace = {
-		icon = mission_assemble_an_army
-		required_missions = { emp_fra_subjugate_lorraine }
-		provinces_to_highlight = {
-			area = alsace_area
-			NOT = {
+			
+			336 = {
 				owned_by = ROOT
 			}
 		}
-		trigger = {
-			alsace_area = {
-				type = all
-				owned_by = ROOT
-			}
-		}
 		effect = {
-			add_country_modifier = {
-				name = "fra_into_germany"
-				duration = 7300
-			}
-			upper_rhineland_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_claim = ROOT
-			}
-			romandie_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			switzerland_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
+			custom_tooltip = fra_algeria_mission_tt
+			unlock_estate_privilege = {
+					estate_privilege = estate_burghers_desert_expansion
 			}
 		}
 		ai_weight = {
 			factor = 500
 		}
 	}
+	
 	emp_fra_germany = {
 		icon = interfere_in_germany
-		required_missions = { emp_fra_annex_alsace }
 		provinces_to_highlight = {
 			NOT = {
 				owned_by = ROOT
@@ -1926,7 +1929,7 @@ emp_france_missions_5 = {
 	}
 	emp_fra_empire = {
 		icon = french_empire
-		required_missions = { emp_fra_germany emp_fra_client_states }
+		position = 8
 		provinces_to_highlight = {
 		}
 		trigger = {

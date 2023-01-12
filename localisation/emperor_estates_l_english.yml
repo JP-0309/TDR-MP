@@ -1299,3 +1299,5 @@
  estate_nobles_france_horses_revoke_gt:0 "Revoking this privilege will anger our nobles, who will be upset at the idea of their historical traditions being overturned."
  estate_nobles_france_horses_desc:0 "The French Chevaliers are some of the most feared soldiers in our time. French Knights train their whole lives for the opportunity to serve their lords in battle. Knighthood in France is a historical tradition that emphasizes honor and integrity, as well as combat prowess."
  unlock_privilege_estate_nobles_france_horses_tt:0 "Enables the §YFrench Chevaliers§! nobility privilege."
+ estate_church_institutionalize_indulgences:0 "Institutionalize Indulgences"
+ estate_church_institutionalize_indulgences_desc:0 "Indulgences are an intrinsic belief within the Catholic Church. Sins can be forgiven by God... for a price. Institutionalizing indulgences into the framework of our justice system can help us to extract revenue from sinners and criminals."

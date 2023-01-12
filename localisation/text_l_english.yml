@@ -8225,3 +8225,8 @@
  flavor_fra.9998.a.tt:0 "§RThe Paix Perpetuelle modifier will be removed.§!"
  emp_fra_swiss_peace_title:0 "The Paix Perpetuelle"
  emp_fra_swiss_peace_desc:0 "The Paix Perpetuelle represents a commitment between France and Switzerland to avoid fighting in wars against one another, as both nations mutually benefit from trade and coexistence with one another."
+ fra_algeria_mission_tt:0 "§YUnlocks the Desert Expansion Estate Privilege.§!"
+ emp_fra_algerian_trade_title:0 "French Algeria"
+ fra_germany:0 "Francization"
+ fra_germany_desc:0 "We must expand the cultural and linguistic influence of the French nation to those of other cultural groups so that they may better integrate into our society."
+ emp_fra_conquer_corsica_title:0 "Mediterranean Bases"

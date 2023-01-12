@@ -12755,3 +12755,7 @@ fra_swiss_peace = {
 	land_morale = 0.10
 	defensiveness = 0.20
  }
+ 
+ fra_germany = {
+	culture_conversion_cost = -0.15
+ }
