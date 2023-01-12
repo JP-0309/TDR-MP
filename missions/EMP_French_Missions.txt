@@ -1469,7 +1469,7 @@ emp_france_missions_4 = {
 		required_missions = { emp_fra_conquer_provence }
 		position = 3
 		provinces_to_highlight = {
-			province_id = 1247
+			area = corsica_sardinia_area
 		}
 		trigger = {
 			OR = {
@@ -1558,7 +1558,6 @@ emp_france_missions_4 = {
 			}
 		}
 		effect = {
-			custom_tooltip = fra_algeria_mission_tt
 			unlock_estate_privilege = {
 					estate_privilege = estate_burghers_desert_expansion
 			}
@@ -1723,6 +1722,113 @@ emp_france_missions_4 = {
 		}
 		ai_weight = {
 			factor = 50
+		}
+	}
+	emp_fra_guinea = {
+		icon = mission_west_african_ports
+		position = 7
+		provinces_to_highlight = {
+			region = guinea_region
+			NOT = {owned_by = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				region = guinea_region
+				value = 4
+				development = 10
+			}
+		}
+		effect = {		
+			jolof_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			futa_jallon_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			manding_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			tekrur_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 500
+		}
+	}
+	
+	emp_fra_mali_trade = {
+		icon = mission_establish_high_seas_navy
+		position = 8
+		required_missions = { emp_fra_guinea }
+		provinces_to_highlight = {
+			area = tekrur_area
+			area = manding_area
+			area = futa_jallon_area
+			area = jolof_area
+			NOT = {owned_by = ROOT }
+		}
+		trigger = {
+			tekrur_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			manding_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			futa_jallon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			jolof_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {		
+			add_country_modifier = {
+				name = "fra_guinea"
+				duration = 7300
+			}
+		}
+		ai_weight = {
+			factor = 500
+		}
+	}
+	emp_fra_secure_gold = {
+		icon = mission_war_chest
+		position = 9
+		required_missions = { emp_fra_mali_trade }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			gold = 4
+		}
+		effect = {		
+			add_country_modifier = {
+				name = "fra_gold_ships"
+				duration = -1
+			}
+		}
+		ai_weight = {
+			factor = 500
 		}
 	}
 }
@@ -1929,7 +2035,7 @@ emp_france_missions_5 = {
 	}
 	emp_fra_empire = {
 		icon = french_empire
-		position = 8
+		position = 7
 		provinces_to_highlight = {
 		}
 		trigger = {

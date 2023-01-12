@@ -12759,3 +12759,11 @@ fra_swiss_peace = {
  fra_germany = {
 	culture_conversion_cost = -0.15
  }
+ 
+ fra_guinea = {
+	global_trade_power = 0.20
+ }
+ 
+ fra_gold_ships = {
+	naval_forcelimit_modifier = 0.15
+ }
