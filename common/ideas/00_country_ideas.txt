@@ -172,11 +172,11 @@ ENG_ideas = {
 GBR_ideas = {
 	start = {
 		naval_morale = 0.20
-		heavy_ship_power = 0.15
+		drill_gain_modifier = 0.20
 	}
 
 	bonus = {
-		navy_tradition = 1
+		manpower_recovery_speed = .20
 	}
 	
 	trigger = {
@@ -193,6 +193,7 @@ GBR_ideas = {
 	}
 	british_merchant_navy = {
 		global_tariffs = 0.15
+		heavy_ship_power = 0.10
 	}
 	gbr_the_royal_society = {
 		technology_cost = -0.05
@@ -207,8 +208,8 @@ GBR_ideas = {
 	}
 	britanna_rules_the_waves = {
 		leader_naval_manuever = 1
-		blockade_efficiency = 0.33
-		allowed_marine_fraction = 0.50
+		allowed_marine_fraction = 0.25
+		navy_tradition = 1
 	}
 }
 

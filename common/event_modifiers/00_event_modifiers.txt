@@ -12736,7 +12736,7 @@ fra_invest_in_colonies = {
 	global_colonial_growth = 10
 	may_explore = yes
 	global_tax_modifier = -0.05
-	global_manpower_modifier = -0.05
+	global_sailors_modifier = -0.05
 }
 
 fra_swiss_peace = {
@@ -12766,4 +12766,5 @@ fra_swiss_peace = {
  
  fra_gold_ships = {
 	naval_forcelimit_modifier = 0.15
+	naval_morale = 0.05
  }
