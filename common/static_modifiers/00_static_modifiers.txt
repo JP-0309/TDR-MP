@@ -555,7 +555,7 @@ scorched_earth = {
 ##########################################################################
 
 base_values = {
-	max_absolutism = 65
+	max_absolutism = 40
 	merchants = 2							#Start with 2 merchants
 	diplomats = 2							#Start with 2 diplomats..
 	missionaries = 1						#1 missionary
@@ -622,7 +622,7 @@ positive_stability = {
 	yearly_corruption = -0.02
 	global_institution_spread = 0.05
 	yearly_harmony = 0.25
-	
+	millitary_loyalty_modifier = 0.05
 	
 }
 
@@ -638,6 +638,7 @@ negative_stability = {
 	devotion = 1
 	caravan_power = 0.05
 	yearly_harmony = 0.25
+	millitary_loyalty_modifier = -0.05
 }
 
 positive_mandate = {	# 100% strength at 100 mandate, 0% at 50 mandate
@@ -715,6 +716,7 @@ bankruptcy = {
 
 war = {
 	rr_girondists_influence = 0.15
+	millitary_loyalty_modifier = 0.05
 }
 
 peace = {
@@ -724,6 +726,7 @@ peace = {
 	global_institution_spread = 0.1
 	rr_girondists_influence = -0.1
 	pr_smugglers_influence = 0.1
+	millitary_loyalty_modifier = -0.05
 }
 
 unconditional_surrender = {
@@ -749,6 +752,7 @@ war_exhaustion = {
 	sailors_recovery_speed = -0.01
 	siege_ability = -0.01
 	global_trade_goods_size_modifier = -0.02
+	millitary_influence_modifier = 0.02
 }
 
 doom = {
@@ -797,6 +801,7 @@ army_tradition = {
 	nobles_loyalty_modifier = 0.05
 	maratha_loyalty_modifier = 0.05
 	rajput_loyalty_modifier = 0.05
+	millitary_loyalty_modifier = 0.05
 }
 
 navy_tradition = {
@@ -1673,6 +1678,7 @@ subject_sword_hunt = {
 
 supply_depot_area = {
 	supply_limit_modifier = 0.5
+	local_friendly_movement_speed = 0.10
 }
 
 ########################################
@@ -1787,6 +1793,7 @@ army_drill_modifier = { # Used by an entire army, is the average of all subunits
 janissary_regiment = {
 	fire_damage_received = -0.1
 	shock_damage_received = -0.1
+	morale_damage_received = -0.05
 	reinforce_cost_modifier = 1.0
 	drill_gain_modifier = 1.0
 }
@@ -1895,7 +1902,7 @@ at_peace_revolutionary = { # Applied if at peace while reactionaries are borderi
 }
 
 expanded_infrastructure = {
-	allowed_num_of_buildings = 2
+	allowed_num_of_buildings = 1.5
 	allowed_num_of_manufactories = 1
 	regiment_recruit_speed = -0.15
 	ship_recruit_speed = -0.15
@@ -1921,6 +1928,7 @@ centralize_state = {
 	statewide_governing_cost = -0.2
 	local_prosperity_growth = 0.25
 	local_state_maintenance_modifier = -0.2
+	local_development_cost = -0.075
 	picture = "centralize_state"
 }
 special_province = {

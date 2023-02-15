@@ -276,6 +276,7 @@ monarchy = {
 		north_german_reform_republic
 		south_german_reform_republic
 		rhenish_league_republic
+		dutch_peasant_republic
 	}
 
 	#States General works with few others
@@ -295,6 +296,7 @@ monarchy = {
 		rhenish_league_monarchy
 		rhenish_league_republic
 		rhenish_league_theocracy
+		dutch_peasant_republic
 	}
 
 	#Flavor
@@ -392,6 +394,7 @@ republic = {
 				north_german_reform_republic
 				south_german_reform_republic
 				rhenish_league_republic
+				dutch_peasant_republic
 			}
 		}
 		republican_virtues = {

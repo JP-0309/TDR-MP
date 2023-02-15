@@ -3145,17 +3145,22 @@ estate_cossacks_establish_the_cossack_regiments = {
 	can_select = {
 	}
 	on_granted = {
+		add_country_modifier = {
+			name = new_cossack1
+			duration = -1
+		}
 	}
 	modifier_by_land_ownership = {
-		special_unit_forcelimit = 0.5
+		special_unit_forcelimit = 0.025
 	}
 	penalties = {
 	}
 	benefits = {
 	}
 	mechanics = {
-		enables_cossack_regiments
-		exempt_from_seize_land
+	}
+	on_revoked = {
+		remove_country_modifier =  new_cossack1
 	}
 	ai_will_do = {
 		factor = 1
@@ -3190,13 +3195,20 @@ estate_cossacks_expand_the_cossack_regiments = {
 	can_select = {
 	}
 	on_granted = {
+		add_country_modifier = {
+			name = new_cossack2
+			duration = -1
+		}
 	}
 	modifier_by_land_ownership = {
-		special_unit_forcelimit = 0.5
+		special_unit_forcelimit = 0.025
 	}
 	penalties = {
 	}
 	benefits = {
+	}
+	on_revoked = {
+		remove_country_modifier =  new_cossack2
 	}
 	ai_will_do = {
 		factor = 1

@@ -1,0 +1,14 @@
+spriteTypes = {
+	spriteType = {
+		name = "millitary_loyalty_modifier"
+		texturefile = "gfx/interface/ideas_EU4/millitary_loyalty_modifier.dds"
+	}
+	spriteType = {
+		name = "millitary_influence_modifier"
+		texturefile = "gfx/interface/ideas_EU4/millitary_influence_modifier.dds"
+	}
+	spriteType = {
+		name = "beaus_funny_event"
+		texturefile = "gfx//event_pictures_beaus//beaus_funny_event.tga"
+	}
+}

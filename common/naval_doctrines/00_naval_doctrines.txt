@@ -204,8 +204,10 @@ venetian_arsenal_naval_doctrine = {
 	can_select = {
 		is_primitive = no
 		NOT = { has_country_flag = unlock_norwegian_naval_doctrine } 
-		primary_culture = venetian
-		tag = ITA
+		or = {
+			primary_culture = venetian
+			tag = ITA
+		}	
 	}
 
 	country_modifier = {

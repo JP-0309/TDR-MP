@@ -1416,7 +1416,7 @@ frontier_ideas = {
 	}
 	frontier5 = {
 		vassal_forcelimit_bonus = 0.75
-		reduced_liberty_desire = -0.1
+		reduced_liberty_desire = 10
 	}
 	frontier6 = {
 		diplomatic_reputation = 1
@@ -1574,7 +1574,7 @@ multicultural_ideas = {
 		advisor_cost = -0.15
 	}
 	multicultural7 = {
-		manpower_in_accepted_culture_provinces	= 0.15
+		manpower_in_accepted_culture_provinces	= 0.10
 	}
 
 	ai_will_do = {
@@ -1750,7 +1750,7 @@ equipment_ideas = {
 	}
 	equipment2 = {
 		infantry_power =  0.05
-		cavalry_shock = 0.1
+		infantry_fire = 0.1
 		cavalry_fire = 0.05
 	}
 	equipment3 = {
@@ -1758,8 +1758,8 @@ equipment_ideas = {
 	}
 	equipment4 = {
 		cavalry_power = 0.05
-		artillery_fire = 0.1
-		artillery_shock = 0.1
+		cavalry_shock  = 0.1
+		infantry_shock = 0.05
 	}
 	equipment5 = {
 		mil_tech_cost_modifier = -0.05
@@ -1769,8 +1769,732 @@ equipment_ideas = {
 	}
 	equipment7 = {
 		artillery_power = 0.05
+		artillery_fire = 0.1
+		artillery_shock = 0.1
+	}
+
+	ai_will_do = {
+		factor = 1.0
+	}
+}
+irregularwarfare_ideas = {
+	category = MIL
+
+	bonus = {
+		discipline  = 0.025
+	}
+	trigger = {
+		NOT = {
+			has_idea_group = grand_warfare_ideas
+			}
+		}
+	irregular1 = {
+		reinforce_speed = 0.25
+	}
+	irregular2 = {
+		morale_damage	 = 0.10
+	}
+	irregular3 = {
+		global_regiment_recruit_speed = -0.15
+	}
+	irregular4 = {
+		movement_speed = 0.30
+	}
+	irregular5 = {
+		fire_damage	 = 0.15
+	}
+	irregular6 = {
+		manpower_recovery_speed = 0.15
+	}
+	irregular7 = {
+		recover_army_morale_speed = 0.25
+	}
+
+	ai_will_do = {
+		factor = 1.0
+	}
+}
+grand_warfare_ideas = {
+	category = MIL
+
+	bonus = {
+		discipline  = 0.025
+	}
+	trigger = {
+		NOT = {
+			has_idea_group = irregularwarfare_ideas
+			}
+		}
+	grandwarfare1 = {
+		land_forcelimit_modifier = 0.10
+	}
+	grandwarfare2 = {
+		land_attrition	 = -0.10
+	}
+	grandwarfare3 = {
+		military_tactics = 0.10
+	}
+	grandwarfare4 = {
+		reserves_organisation	 = 0.35
+	}
+	grandwarfare5 = {
+		siege_ability = 0.15
+	}
+	grandwarfare6 = {
+		global_regiment_cost = -0.10
+	}
+	grandwarfare7 = {
+		artillery_shock = 0.5	
+		artillery_power = 0.05
+	}
+
+	ai_will_do = {
+		factor = 1.0
+	}
+}
+levy_ideas = {
+	category = MIL
+
+	bonus = {
+		land_forcelimit_modifier  = 0.15
+	}
+	trigger = {
+		NOT = {
+			has_idea_group = profesionalism_ideas
+			}
+		}
+	levy1 = {
+		global_regiment_cost = -0.10
+	}
+	levy2 = {
+		manpower_recovery_speed	 = 0.15
+	}
+	levy3 = {
+		has_banners = yes
+		amount_of_banners = 5
+	}
+	levy4 = {
+		manpower_in_own_culture_provinces = 0.075
+	}
+	levy5 = {
+		global_manpower_modifier	 = 0.20
+	}
+	levy6 = {
+		mercenary_cost = -0.10
+		merc_maintenance_modifier = -0.2
+	}
+	levy7 = {
+		morale_damage_received		 = 	-0.1
+	}
+
+	ai_will_do = {
+		factor = 1.0
+	}
+}
+profesionalism_ideas = {
+	category = MIL
+
+	bonus = {
+		discipline  = 0.025
+	}
+	trigger = {
+		NOT = {
+			has_idea_group = levy_ideas
+			}
+		}
+	profesionalism1 = {
+		army_tradition_decay = -0.01
+	}
+	profesionalism2 = {
+		fire_damage_received = -0.10
+	}
+	profesionalism3 = {
+		garrison_size	 = 0.20
+		global_supply_limit_modifier = 0.15
+	}
+	profesionalism4 = {
+		mil_advisor_cost = -0.35
+	}
+	profesionalism5 = {
+		yearly_army_professionalism = 0.005
+	}
+	profesionalism6 = {
+		shock_damage_received = -0.05
+		land_morale = 0.05
+	}
+	profesionalism7 = {
+		has_carolean = 	yes
+	}
+
+	ai_will_do = {
+		factor = 1.0
+	}
+}
+infantry_backbone_ideas = {
+	category = MIL
+
+	bonus = {
+		discipline  = 0.025
+	}
+	trigger = {
+		NOT = {
+			has_idea_group = cavalry_backbone_ideas
+			}
+		}
+	infantry1 = {
+		infantry_cost = -0.1
+	}
+	infantry2 = {
+		shock_damage_received = -0.15
+	}
+	infantry3 = {
+		infantry_power= 0.1
+	}
+	infantry4 = {
+		leader_cost = -0.1
+	}
+	infantry5 = {
+		land_morale = 0.1
+	}
+	infantry6 = {
+		siege_ability= 0.15
+	}
+	infantry7 = {
+		infantry_fire = 0.25
+		infantry_shock = 0.15
+	}
+
+	ai_will_do = {
+		factor = 1.0
+	}
+}
+cavalry_backbone_ideas = {
+	category = MIL
+
+	bonus = {
+		discipline  = 0.025
+	}
+	trigger = {
+		NOT = {
+			has_idea_group = infantry_backbone_ideas
+			}
+		}
+	cavalry1 = {
+		cavalry_cost = -0.1
+	}
+	cavalry2 = {
+		cav_to_inf_ratio = 0.15
+	}
+	cavalry3 = {
+		movement_speed = 0.15
+	}
+	cavalry4 = {
+		cavalry_power = 0.1
+	}
+	cavalry5 = {
+		discipline = 0.025
+	}
+	cavalry6 = {
+		yearly_army_professionalism = 0.005
+	}
+	cavalry7 = {
+		cavalry_fire = 0.15
+		cavalry_shock = 0.25
+	}
+
+	ai_will_do = {
+		factor = 1.0
+	}
+}
+high_seas_ideas = {
+	category = DIP
+
+	bonus = {
+		naval_morale  = 0.10
+	}
+	trigger = {
+		NOT = {
+			has_idea_group = flotilla_ideas
+			}
+		}
+	high_seas1 = {
+		heavy_ship_cost = -0.15
+	}
+	high_seas2 = {
+		heavy_ship_power = 0.15
+	}
+	high_seas3 = {
+		allowed_marine_fraction = 0.15
+	}
+	high_seas4 = {
+		ship_durability = 0.15
+	}
+	high_seas5 = {
+		sailor_maintenance_modifer = -0.2
+	}
+	high_seas6 = {
+		global_naval_engagement_modifier = 0.1
+	}
+	high_seas7 = {
+		artillery_fire = 0.75
+	}
+
+	ai_will_do = {
+		factor = 1.0
+	}
+}
+flotilla_ideas = {
+	category = dip
+
+	bonus = {
+		naval_forcelimit_modifier  = 0.15
+	}
+	trigger = {
+		NOT = {
+			has_idea_group = high_seas_ideas
+			}
+		}
+	flotilla1 = {
+		sailors_recovery_speed = 0.25
+	}
+	flotilla2 = {
+		galley_power = 0.20
+		light_ship_power = 0.35
+	}
+	flotilla3 = {
+		global_sailors_modifier = 0.20
+		allowed_marine_fraction = 0.20
+	}
+	flotilla4 = {
+		naval_morale = 0.20
+	}
+	flotilla5 = {
+		own_coast_naval_combat_bonus = 1.0
+	}
+	flotilla6 = {
+		global_ship_trade_power = 0.25
+		movement_speed_in_fleet_modifier = 1
+	}
+	flotilla7 = {
+		sea_repair = yes
+	}
+}
+leadership_ideas = {
+	category = MIL
+
+	bonus = {
+		free_leader_pool  = 2
+		discipline = 0.025
+	}
+	leader1 = {
+		leader_land_fire = 1
+	}
+	leader2 = {
+		leader_land_manuever	= 1
+		leader_naval_manuever = 1
+	}
+	leader3 = {
+		leader_naval_fire = 1
+	}
+	leader4 = {
+		leader_siege = 1
+	}
+	leader5 = {
+		yearly_army_professionalism = 0.0075
+		drill_gain_modifier = 0.30
+	}
+	leader6 = {
+		leader_naval_shock = 1
+	}
+	leader7 = {
+		army_tradition = 1
+		drill_decay_modifier = -0.15
+	}
+
+	ai_will_do = {
+		factor = 1.0
+	}
+}
+frontier_ideas = {
+	category = DIP
+
+	bonus = {
+		advisor_cost = -0.20
+	}
+	trigger = {
+		NOT = {
+			has_idea_group = defined_ideas
+			}
+		}
+	frontier1 = {
+		diplomatic_upkeep = 2
+	}
+	frontier2 = {
+		war_exhaustion = -0.15
+	}
+	frontier3 = {
+		caravan_power = 0.15
+	}
+	frontier4 = {
+		placed_merchant_power = 5
+	}
+	frontier5 = {
+		vassal_forcelimit_bonus = 0.75
+		reduced_liberty_desire = 10
+	}
+	frontier6 = {
+		diplomatic_reputation = 1
+	}
+	frontier7 = {
+		manpower_in_accepted_culture_provinces = 0.1
+	}
+
+	ai_will_do = {
+		factor = 1.0
+	}
+}
+defined_ideas = {
+	category = DIP
+
+	bonus = {
+		years_of_nationalism  = -5
+	}
+	trigger = {
+		NOT = {
+			has_idea_group = frontier_ideas
+			}
+		}
+	defined1 = {
+		diplomatic_reputation= 2
+	}
+	defined2 = {
+		diplomatic_annexation_cost = -0.25
+	}
+	defined3 = {
+		manpower_in_own_culture_provinces = 0.10
+	}
+	defined4 = {
+		allow_free_estate_privilege_revocation = yes
+	}
+	defined5 = {
+		global_own_trade_power = 0.2
+	}
+	defined6 = {
+		manpower_in_culture_group_provinces = 0.1
+	}
+	defined7 = {
+		global_spy_defence = 0.2
+	}
+
+	ai_will_do = {
+		factor = 1.0
+	}
+}
+centralism_ideas = {
+	category = ADM
+
+	bonus = {
+		max_absolutism  = 10
+	}
+	trigger = {
+		NOT = {
+			has_idea_group = federalism_ideas
+			}
+		}
+	centralism1 = {
+		global_autonomy = -0.1
+	}
+	centralism2 = {
+		interest = -1
+	}
+	centralism3 = {
+		build_time = -0.15
+	}
+	centralism4 = {
+		min_autonomy_in_territories = -0.25
+	}
+	centralism5 = {
+		global_tax_modifier = 0.2
+	}
+	centralism6 = {
+		stability_cost_modifier = -0.30
+		governing_capacity_modifier = 0.1
+	}
+	centralism7 = {
+		all_power_cost= -0.025
+	}
+
+	ai_will_do = {
+		factor = 1.0
+	}
+}
+federalism_ideas = {
+	category = ADM
+
+	bonus = {
+	development_cost  = -0.1
+	}
+	trigger = {
+		NOT = {
+			has_idea_group = centralism_ideas
+			}
+		}
+	federalism1 = {
+		all_estate_loyalty_equilibrium	 = 0.1
+	}
+	federalism2 = {
+		global_unrest = -2
+	}
+	federalism3 = {
+		build_cost = -0.1
+	}
+	federalism4 = {
+		global_trade_goods_size_modifier = 0.1	 
+	}
+	federalism5 = {
+		idea_cost = -0.05
+	}
+	federalism6 = {
+		adm_advisor_cost = -0.1
+	}
+	federalism7 = {
+		monthly_reform_progress_modifier= 0.15
+	}
+
+	ai_will_do = {
+		factor = 1.0
+	}
+}
+
+multicultural_ideas = {
+	category = DIP
+
+	bonus = {
+	diplomatic_reputation  = 2
+	}
+	trigger = {
+		NOT = {
+			has_idea_group = nationalism_ideas
+			}
+		}
+	multicultural1 = {
+		trade_efficiency  = 0.1
+		years_of_nationalism = -5
+	}
+	multicultural2 = {
+		global_unrest = -2
+		reform_progress_growth = 0.35
+	}
+	multicultural3 = {
+		num_accepted_cultures = 3
+	}
+	multicultural4 = {
+		promote_culture_cost	 = -0.60	 
+	}
+	multicultural5 = {
+		idea_cost = -0.05
+	}
+	multicultural6 = {
+		advisor_cost = -0.15
+	}
+	multicultural7 = {
+		manpower_in_accepted_culture_provinces	= 0.10
+	}
+
+	ai_will_do = {
+		factor = 1.0
+	}
+}
+
+nationalism_ideas = {
+	category = DIP
+
+	bonus = {
+		ae_impact  = -0.15
+	}
+	trigger = {
+		NOT = {
+			has_idea_group = multicultural_ideas
+			}
+		}
+	nationalism1 = {
+		manpower_in_own_culture_provinces = 0.15
+	}
+	nationalism2 = {
+		stability_cost_modifier	 = -0.30
+	}
+	nationalism3 = {
+		global_own_trade_power = 0.20
+	}
+	nationalism4 = {
+		culture_conversion_cost	 = -0.35	 
+	}
+	nationalism5 = {
+		global_unrest = -2
+	}
+	nationalism6 = {
+		hostile_attrition = 1.5
+	}
+	nationalism7 = {
+		manpower_in_true_faith_provinces = 0.15
+	}
+
+	ai_will_do = {
+		factor = 1.0
+	}
+}
+
+urban_ideas = {
+	category = DIP
+
+	bonus = {
+		build_time  = -0.15
+		
+	}
+	trigger = {
+		NOT = {
+			has_idea_group = rural_ideas
+			}
+		}
+	urban1 = {
+		trade_efficiency = 0.15
+	}
+	urban2 = {
+		center_of_trade_upgrade_cost	 = -0.30
+		development_cost = -0.05
+	}
+	urban3 = {
+		global_foreign_trade_power = 0.20
+	}
+	urban4 = {
+		defensiveness	 = 0.20 
+	}
+	urban5 = {
+		global_trade_goods_size_modifier = 0.15
+	}
+	urban6 = {
+		global_prosperity_growth = 0.1
+	}
+	urban7 = {
+		state_maintenance_modifier = -0.15
+	}
+
+	ai_will_do = {
+		factor = 1.0
+	}
+}
+
+rural_ideas = {
+	category = DIP
+
+	bonus = {
+		build_cost  = -0.1
+		
+	}
+	trigger = {
+		NOT = {
+			has_idea_group = urban_ideas
+			}
+		}
+	rural1 = {
+		governing_capacity_modifier = 0.25
+	}
+	rural2 = {
+		movement_speed	 = 0.20
+	}
+	rural3 = {
+		global_tax_modifier = 0.20
+	}
+	rural4 = {
+		global_monthly_devastation	 = -0.20	 
+	}
+	rural5 = {
+		caravan_power= 0.25
+	}
+	rural6 = {
+		global_manpower_modifier = 0.15
+	}
+	rural7 = {
+		global_own_trade_power = 0.15
+	}
+
+	ai_will_do = {
+		factor = 1.0
+	}
+}
+
+legalism_ideas = {
+	category = ADM
+
+	bonus = {
+		expand_administration_cost  = -0.25
+		imperial_authority_value = 0.075
+	}
+	legalism1 = {
+		national_focus_years = -5
+	}
+	legalism2 = {
+		global_unrest= -1.5
+	}
+	legalism3 = {
+		global_tax_modifier = 0.20
+	}
+	legalism4 = {
+		legitimacy	 = 1.5
+		republican_tradition = 0.5
+		devotion = 1.5
+		meritocracy = 1.5
+		meritocracy = 1.5
+	}
+	legalisml5 = {
+		country_admin_power = 1
+		free_policy = 1
+	}
+	legalism6 = {
+		technology_cost = -0.1
+	}
+	legalism7 = {
+		core_creation = -0.1
+	}
+
+	ai_will_do = {
+		factor = 1.0
+	}
+}
+
+equipment_ideas = {
+	category = MIL
+
+	bonus = {
+		global_regiment_cost = -0.10
+	}
+	equipment1 = {
+		land_attrition = -0.10
+		reinforce_cost_modifier = -0.20
+	}
+	equipment2 = {
+		infantry_power =  0.05
 		infantry_fire = 0.1
+		cavalry_fire = 0.05
+	}
+	equipment3 = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	equipment4 = {
+		cavalry_power = 0.05
+		cavalry_shock  = 0.1
 		infantry_shock = 0.05
+	}
+	equipment5 = {
+		mil_tech_cost_modifier = -0.05
+	}
+	equipment6 = {
+		global_regiment_recruit_speed = -0.15
+	}
+	equipment7 = {
+		artillery_power = 0.05
+		artillery_fire = 0.1
+		artillery_shock = 0.1
 	}
 
 	ai_will_do = {

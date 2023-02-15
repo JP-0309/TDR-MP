@@ -1873,8 +1873,37 @@ ned_lowlands_victory = {
 }
 ###modded additions
 ned_linear_pike_shot = {
-	movement_speed = 0.20
+	movement_speed = 0.25
 	fire_damage = 0.10
+}
+ned_dutch_bonus = {
+	trade_efficiency = 0.075
+	naval_morale = 0.10
+}
+ned_flemish_bonus = {
+	artillery_fire = 0.5
+	placed_merchant_power = 5
+}
+ned_walloon_bonus = {
+	production_efficiency = 0.15
+	global_trade_goods_size_modifier = 0.10
+}
+ned_frisian_bonus = {
+	land_morale = 0.075
+	privateer_efficiency = 0.35
+}
+flanders_field = {
+	local_defender_dice_roll_bonus = 1
+	local_defensiveness = 0.20
+	local_manpower_modifier = 0.10
+	province_trade_power_modifier = 0.30
+	local_development_cost = -0.10
+}
+frisian_communities = {
+	local_autonomy = 0.05
+	local_manpower = 500
+	development_cost = -0.025
+	local_unrest = -1
 }
 
 # Irish Missions

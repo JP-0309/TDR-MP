@@ -1730,7 +1730,7 @@ gc_por_6 = {
 						is_subject_of_type = self_governing_colony
 					}
 					capital_scope = {
-						or{
+						or={
 							continent = north_america
 							continent = south_america
 						}

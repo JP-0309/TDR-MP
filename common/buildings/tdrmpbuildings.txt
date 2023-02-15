@@ -65,9 +65,7 @@ gunpowder_mill = {
 	cost = 400
 	time = 24
 	build_trigger = {
-		development = 20
-		OR = {
-		}
+		development = 25
 	}
 	modifier = {
 		fire_damage = 0.015

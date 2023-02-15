@@ -10,7 +10,7 @@ monarchy_mechanic = {
 	}
 	modifiers = {
 		nobles_influence_modifier = 0.05
-	}
+	} 
 }
 
 #Feudalism vs Autocracy:
@@ -120,6 +120,7 @@ feudalism_reform = {
 		nobles_influence_modifier = 0.05
 		maratha_exclusive_influence_modifier = 0.05
 		rajput_exclusive_influence_modifier = 0.05
+		special_unit_forcelimit = 0.15
 	}
 	ai = {
 		factor = 0.5 #generic

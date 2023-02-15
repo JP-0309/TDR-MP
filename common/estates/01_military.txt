@@ -1,0 +1,65 @@
+estate_military = {
+	icon = 2
+	trigger = {
+		NOT = { government = native }
+		NOT = { has_reform = siberian_tribe }
+	}
+	country_modifier_happy = {
+		land_morale = 0.10	
+		army_tradition = 1
+	}
+	country_modifier_neutral = {
+		land_morale = 0.10	
+	}	
+	country_modifier_angry = {
+		land_morale = -0.10
+		discipline = -0.05	
+		global_unrest = 2
+	}
+
+	land_ownership_modifier = {
+		military_loyalty = 0.2
+	}
+
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			NOT = { religion_group = owner }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { religion = owner }
+		}
+		modifier = {
+			factor = 0.67
+			NOT = { is_state_core = owner }
+		}
+		modifier = {
+			factor = 1.2
+			base_tax = 10
+		}
+	}
+
+	base_influence = 10
+	
+	color = { 120 0 255 }
+
+	privileges = {
+		estate_church_volounteer_organization
+		estate_nobles_gaurd_organization
+		estate_burghers_militia_organization
+		cart_military_doctrine
+		heavy_military_doctrine
+		frontline_military_doctrine
+		reserves_military_doctrine
+		nobles_officers
+		burgher_officers
+		zealous_officers
+	}
+
+	agendas = {
+		
+	}
+	influence_from_dev_modifier = 1.0
+}

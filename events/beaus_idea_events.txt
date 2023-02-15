@@ -1,0 +1,134 @@
+###centralism
+country_event = {
+	id = beaus_idea_event_centralism.1
+	title = "beaus_idea_event_centralism_1"
+	desc = "beaus_idea_event_centralism_desc_1"
+	
+	
+	picture = LIBERUM_VETO_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		
+		has_idea_group = centralism_ideas
+		NOT = { has_country_modifier = beaus_centralism_event_1 }	
+		
+	}	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "beaus_idea_event_centralism_1_option_1"
+		add_prestige = -25	
+	}
+	
+	option = {
+		name = "beaus_idea_event_centralism_1_option_2"
+		add_years_of_income = -0.25
+		add_country_modifier = {
+				name = "beaus_centralism_event_1"
+				duration = 1825
+			}
+	}
+}
+
+country_event = {
+	id = beaus_idea_event_centralism.2
+	title = "beaus_idea_event_centralism_2"
+	desc = "beaus_idea_event_centralism_desc_2"
+	
+	
+	picture = LIBERUM_VETO_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		
+		has_idea_group = centralism_ideas
+		
+	}	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "beaus_idea_event_centralism_2_option_1"
+			add_corruption = 2
+			add_estate_loyalty = {
+				estate = all
+				loyalty = 10
+			}
+	}
+	
+	option = {
+		name = "beaus_idea_event_centralism_2_option_2"
+		add_estate_loyalty = {
+			estate = all
+			loyalty = -15
+		}
+		add_corruption = -2
+	}
+}
+country_event = {
+	id = beaus_idea_event_centralism.3
+	title = "beaus_idea_event_centralism_3"
+	desc = "beaus_idea_event_centralism_desc_3"
+	
+	
+	picture = LIBERUM_VETO_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		
+		has_idea_group = centralism_ideas
+		
+	}	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "beaus_idea_event_centralism_3_option_1"
+		add_stability = 1
+		add_prestige = 15
+	}
+
+}
+
+country_event = {
+	id = beaus_idea_event_centralism.4
+	title = "beaus_idea_event_centralism_4"
+	desc = "beaus_idea_event_centralism_desc_4"
+	
+	
+	picture = LIBERUM_VETO_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		
+		has_idea_group = centralism_ideas
+		
+	}	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "beaus_idea_event_centralism_4_option_1"
+		add_stability = -1
+		add_adm_power = -50
+	}
+	option = {
+		name = "beaus_idea_event_centralism_4_option_2"
+		add_stability = -1
+		add_mil_power = -50
+	}
+}

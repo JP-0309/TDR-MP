@@ -14,3 +14,9 @@ upgrade_levies2 = {
 upgrade_levies3 = {
 	remove_country_modifier = expand_levies_third
 }
+upgrade_gaurds1 = {
+	remove_country_modifier = gaurds
+}
+demobelization ={
+	remove_country_modifier = mobilization
+} 

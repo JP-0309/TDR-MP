@@ -58,6 +58,8 @@ country_decisions = {
 		allow = {
 			adm_tech = 18
 			army_professionalism = 0.50
+			mil_power = 300
+			adm_power = 150
 		}
 		effect = {
 			custom_tooltip = enabled_mobilization
@@ -72,6 +74,7 @@ country_decisions = {
 			factor = 1
 		}
 	}
+	
 	mobilize = {
 		potential = {
 			has_dlc = "Cradle of Civilization"
@@ -80,15 +83,30 @@ country_decisions = {
 		}
 		allow = {
 			has_country_modifier = enabled_mobilization
+			NOT = { has_country_modifier = demobilization }
+			NOT = { has_country_modifier = mobilization }
 			mil_tech = 18
+			mil_power = 75
 		}
 		effect = {
-			custom_tooltip = mobilizing
-			add_mil_power = -100
-			add_country_modifier = {
-				name = "mobilization"
-				duration = 120
-			}
+			country_event = { id = beaus_event_mobilization.1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	demobilize = {
+		potential = {
+			has_dlc = "Cradle of Civilization"
+			has_country_modifier =  mobilization 
+		}
+		allow = {
+			has_country_modifier = mobilization
+			dip_power = 75
+		}
+		effect = {
+			country_event = { id = beaus_event_mobilization.2 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -312,6 +330,7 @@ country_decisions = {
 				name = "elite_gaurds"
 				duration = -1
 			}
+			upgrade_gaurds1 = yes
 		}
 		ai_will_do = {
 			factor = 1
@@ -327,7 +346,7 @@ country_decisions = {
 		allow = {
 			full_idea_group = profesionalism_ideas
 			army_professionalism = 0.50
-			mil_tech = 19
+			mil_tech = 11
 			mil_power = 100
 		}
 		effect = {

@@ -5093,7 +5093,7 @@
  NO_UNPAUSE_PLAYERS_BEHIND_TOO_MUCH:0 "Before unpausing you need to wait for the following player(s) to catch up:\n$PLAYERS|Y$"
  NO_SPEEDUP_PLAYERS_BEHIND_TOO_MUCH:0 "Before increasing the game speed you need to wait for the following player(s) to catch up:\n$PLAYERS|Y$"
  building_artillery_foundry:0 "Artillery Foundry"
- building_artillery_foundry_desc:0 "Creating a state-managed artillery foundary will allow us to have more oversight over the quality of our artillery platforms, as well as produce cannons and ammunition on an as-needed basis. \n\nThis building requires that a province have at least §Y15 development§! and produce either §Ycopper§!, §Yiron§!, §Ycoal§!, or §Ynaval supplies§! trade goods.\n"
+ building_artillery_foundry_desc:0 "Creating a state-managed artillery foundary will allow us to have more oversight over the quality of our artillery platforms, as well as produce cannons and ammunition on an as-needed basis. \n\nThis building requires that a province have at least §Y20 development§! and produce either §Ycopper§!, §Yiron§!, §Ycoal§!, or §Ynaval supplies§! trade goods.\n"
  building_basic_bitch_road:0 "Basic Road"
  building_basic_bitch_road_desc:0 "State-organized road infrastructure will help both our civilian population and our military to traverse our nation and conduct commerce."
  building_glass_works:0 "Glass Works "

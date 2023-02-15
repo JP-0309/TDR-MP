@@ -16317,6 +16317,7 @@ falun_copper_mine = {
 		}
 		country_modifiers = {
 			artillery_cost = -0.1
+			artillery_power = 0.05
 		}
 		on_upgraded = {
 		}
@@ -16338,6 +16339,8 @@ falun_copper_mine = {
 		}
 		country_modifiers = {
 			artillery_cost = -0.2
+			artillery_power = 0.10
+			force_march_free = yes
 		}
 		on_upgraded = {
 		}

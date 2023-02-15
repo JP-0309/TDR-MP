@@ -1,0 +1,4 @@
+beaus_centralism_event_1 = {
+	global_autonomy = -0.10
+	global_unrest = 0.5
+}

@@ -41,7 +41,7 @@ spriteType = {
 }
 spriteType = {
     name = "GFX_officer_acedemy"
-    texturefile = "gfx//interface//buildings//officeracedemy.tga"
+    texturefile = "gfx/interface/buildings/trade_company/military_administration.dds"
     loadType = "INGAME"
 }
 spriteType = {
@@ -101,7 +101,7 @@ spriteType = {
 }
 spriteType = {
     name = "GFX_colonial_trade_center"
-    texturefile = "gfx//interface//buildings//colonialtradecenter.tga"
+    texturefile = "gfx/interface/buildings/trade_company/township.dds"
     loadType = "INGAME"
 }
 }

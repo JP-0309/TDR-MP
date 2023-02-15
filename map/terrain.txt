@@ -145,6 +145,7 @@ categories =  {
 		supply_limit = 4
 		local_development_cost = 0.2
 		nation_designer_cost_multiplier = 0.9
+		combat_width = -0.15
 		
 		terrain_override = { 
 			2 4 8 9 11 18 29 30 31 315 4123 4124 # Sweden
@@ -173,6 +174,7 @@ categories =  {
 		local_development_cost = 0.25
 		nation_designer_cost_multiplier = 0.85
 		supply_limit = 5
+		combat_width = -0.30
 		
 		terrain_override = {
 			508 509 511 515 525 527 530 545 550 554 557 1947 2036 
@@ -243,6 +245,7 @@ categories =  {
 		local_development_cost = 0.15
 		nation_designer_cost_multiplier = 0.9
 		supply_limit = 6
+		combat_width = -0.20
 		
 		terrain_override = {
 			206 1851 # Spain
@@ -313,6 +316,7 @@ categories =  {
 		local_development_cost = 0.35
 		nation_designer_cost_multiplier = 0.75
 		supply_limit = 4
+		combat_width = -0.50
 		
 		terrain_override = {
 			210	226 4962 4963 4964 # Spain
@@ -452,6 +456,7 @@ categories =  {
 		local_development_cost = 0.35
 		nation_designer_cost_multiplier = 0.8
 		supply_limit = 5
+		combat_width = -0.20
 		
 		terrain_override = {
 			1237 1245 2703 #South East Asia
@@ -494,6 +499,7 @@ categories =  {
 		local_development_cost = 0.25
 		nation_designer_cost_multiplier = 0.85
 		supply_limit = 5
+		combat_width = -0.30
 
 		terrain_override = {
 			1860 #England
@@ -666,7 +672,8 @@ categories =  {
 		defence = 1
 		local_defensiveness = 0.1
 		local_development_cost = 0.2
-		nation_designer_cost_multiplier = 0.9	
+		nation_designer_cost_multiplier = 0.9
+		combat_width = -0.30	
 
 		terrain_override = {
 			520 536 542 544 578 2035 2077 2079 2085 2087 2093

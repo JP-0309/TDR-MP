@@ -21,6 +21,77 @@ republic_mechanic = {
 
 #Oligarchy vs Merchant Class vs Noble Elite
 
+dutch_peasant_republic = {
+	icon = "dutch_republic"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			AND = {
+				has_country_modifier = ned_frisian_bonus
+				tag = NT4
+				NOT = { map_setup = map_setup_random }
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = dutch_peasant_republic
+			}
+		}
+	}
+	legacy_equivalent = dutch_republic_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	royal_marriage = no
+	nation_designer_trigger = {
+		has_dlc = "Res Publica"
+	}
+
+	modifiers = {
+		heavy_ship_power = 0.1
+		trade_efficiency = 0.05
+		governing_capacity = 50
+		land_morale = 0.05
+	}
+
+	removed_effect = {
+		if = {
+			# Monarchs seize power
+			limit = { government = monarchy }
+			country_event = { id = dutch_republic.33 }
+		}
+	}
+
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+		}
+
+		states_general_mechanic = {
+			peasants = {
+				land_forcelimit_modifier = 0.15
+				republican_tradition = .5
+				land_morale = 0.075
+				production_efficiency = 0.05
+			}
+
+
+			statists = {
+				naval_forcelimit_modifier = 0.15
+				republican_tradition = -0.5
+				trade_efficiency = 0.10
+				global_trade_power = 0.15
+			}
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+	}
+	duration = 4
+}
 north_german_reform_republic = {
 	icon = "prussian_monarchy"
 	allow_normal_conversion = yes
