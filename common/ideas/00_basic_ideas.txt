@@ -1282,7 +1282,7 @@ cavalry_backbone_ideas = {
 		factor = 1.0
 	}
 }
-high_seas_ideas = {
+naval_ideas = {
 	category = DIP
 
 	bonus = {
@@ -1290,7 +1290,7 @@ high_seas_ideas = {
 	}
 	trigger = {
 		NOT = {
-			has_idea_group = flotilla_ideas
+			has_idea_group = maritime_ideas
 			}
 		}
 	high_seas1 = {
@@ -1319,7 +1319,7 @@ high_seas_ideas = {
 		factor = 1.0
 	}
 }
-flotilla_ideas = {
+maritime_ideas = {
 	category = dip
 
 	bonus = {
@@ -1327,7 +1327,7 @@ flotilla_ideas = {
 	}
 	trigger = {
 		NOT = {
-			has_idea_group = high_seas_ideas
+			has_idea_group = naval_ideas
 			}
 		}
 	flotilla1 = {
