@@ -393,6 +393,7 @@ same_culture_group = {
 	local_tax_modifier = -0.30				#10% penalty if same culture group but nothing else. Not applied if the controller is the Union Tag of the culture group, or has culture_group_union set.
 	local_manpower_modifier = -0.30
 	local_sailors_modifier = -0.30
+	local_development_cost = 0.075
 }
 
 non_accepted_culture = {
@@ -401,6 +402,7 @@ non_accepted_culture = {
 	local_manpower_modifier = -0.75
 	local_sailors_modifier = -0.5
 	local_unrest = 3					#1% revolt risk!
+	local_development_cost = 0.1
 }
 
 accepted_culture_demoted = {
@@ -447,8 +449,8 @@ devastation = {
 }
 
 prosperity = {
-	local_development_cost = -0.1
-	trade_goods_size_modifier = 0.25
+	local_development_cost = -0.025
+	trade_goods_size_modifier = 0.40
 	local_autonomy = -0.05
 }
 
@@ -578,7 +580,7 @@ base_values = {
 	devotion = -0.5
 	meritocracy = -2
 	governing_capacity = 200
-	num_accepted_cultures = 2
+	num_accepted_cultures = 1
 	monthly_splendor = 1
 	artillery_levels_available_vs_fort = 5
 	cav_to_inf_ratio = 0.5
@@ -1887,9 +1889,9 @@ over_governing_capacity_modifier = {
 	stability_cost_modifier = 1.0
 	ae_impact = 0.5
 	improve_relation_modifier = -0.5
-	advisor_cost = 1.0
+	advisor_cost = 3.0
 	monthly_militarized_society = -1.0
-	administrative_efficiency = -0.5
+	administrative_efficiency = -1
 }
 
 

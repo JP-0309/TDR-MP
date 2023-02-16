@@ -1244,7 +1244,7 @@ guiTypes = {
 			spriteType = "GFX_unitpanel_button_large_glow"
 			alwaystransparent = yes
 		}
-		#this is the start of adding the modded buildings tdr
+		#this is the start of adding the modded buildings woland
 		iconType = {
 			name = "infra_banner"
 			position = { x = 4 y = 485 }
